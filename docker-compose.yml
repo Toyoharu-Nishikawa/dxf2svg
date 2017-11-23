@@ -1,0 +1,15 @@
+version: '2'
+services:
+  nginx:
+    image: nginx
+    volumes:
+      - ./public:/usr/share/nginx/html
+      - ./conf.d:/etc/nginx/conf.d
+      - /etc/log/dxf2svg:/var/log/nginx
+    networks:
+      - neco_link
+    ports:
+      - "8082:80"
+networks:
+  neco_link:
+    external: true

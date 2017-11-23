@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DXF to SVG to KICAD_PCB converter</title>
+    <meta charset="utf-8">
+    <link href="components/html5-boilerplate/css/normalize.css" rel="stylesheet">
+    <link href="components/html5-boilerplate/css/main.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+
+<h1>dxf2svg2kicad &mdash; DXF to SVG to KICAD_PCB converter</h1>
+
+<section id="main">
+    <ol class="main-list">
+        <li>Choose a DXF or SVG file to be converted &mdash;
+            <input id="input-file-chooser" type="file"><br>
+       <li>
+            Check the preview image.
+           <div id="svg-image-container"></div>
+        </li>
+        <li>
+            <span id="no-save-link" class="save-link">Save the converted SVG or KICAD_PCB file.</span>
+            <span id="kicad-pcb-save-link" class="save-link">Save the converted
+                <a class="save-kicad-pcb-link" href="#_">KICAD_PCB</a> file.</span>
+            <span id="svg-and-kicad-pcb-save-links" class="save-link">Save the converted
+                <a class="save-svg-link" href="#_">SVG</a> or
+                <a class="save-kicad-pcb-link" href="#_">KICAD_PCB</a> file.</span>
+            <br>
+        </li>
+   </ol>
+</section>
+
+<script src="components/jquery/jquery.min.js"></script>
+<script src="components/underscore/underscore-min.js"></script>
+<script src="components/underscore.string/dist/underscore.string.min.js"></script>
+<script> _.mixin(_.str.exports()); </script>
+<script src="components/positional-format.js/positional-format.js"></script>
+<script src="components/modernizr/modernizr.js"></script>
+<script src="components/modernizr/feature-detects/blob-constructor.js"></script>
+<script src="components/modernizr/feature-detects/file-api.js"></script>
+<script src="components/FileSaver.js/FileSaver.js"></script>
+<script src="scripts/pathseg.js"></script>
+<script src="scripts/dxfToSvg.js"></script>
+<script src="scripts/svgToKicadPcb.js"></script>
+<script src="scripts/index.js"></script>
+
+</body>
+</html>
