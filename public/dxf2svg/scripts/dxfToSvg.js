@@ -121,10 +121,22 @@ function dxfToSvg(dxfString)
     if (svg === '') {
         return null;
     }
-
+    return svg;
+    /*
     var strokeWidth = 0.2;
+    
     var pixelToMillimeterConversionRatio = 3.543299873306695;
-    var svgId = "svg" + Math.round(Math.random() * Math.pow(10, 17));
+     svg =  '<g style="stroke:black; stroke-width:' + strokeWidth + '; ' +
+              'vector-effect:non-scaling-stroke;' +
+              'stroky-opacity:1.0;'+
+              'stroke-linecap:round;' + 
+              'stroke-linejoin:round;'+
+              ' fill:none">\n' +
+              svg +
+              '</g>';
+   return svg;
+
+   var svgId = "svg" + Math.round(Math.random() * Math.pow(10, 17));
     svg = '<svg {0} version="1.1" xmlns="http://www.w3.org/2000/svg">\n' +
           '<g transform="scale({0},-{0})" '.format(pixelToMillimeterConversionRatio) +
             ' style="stroke:black; stroke-width:' + strokeWidth + '; ' +
@@ -132,13 +144,14 @@ function dxfToSvg(dxfString)
           svg +
           '</g>\n' +
           '</svg>\n';
-
+*/
     // The SVG has to be added to the DOM to be able to retrieve its bounding box.
-    $(svg.format('id="'+svgId+'"')).appendTo('body');
+ /*   $(svg.format('id="'+svgId+'"')).appendTo('body');
     var boundingBox = $('svg')[0].getBBox();
     var viewBoxValue = '{0} {1} {2} {3}'.format(boundingBox.x-strokeWidth/2, boundingBox.y-strokeWidth/2,
                                                 boundingBox.width+strokeWidth, boundingBox.height+strokeWidth);
     $('#'+svgId).remove();
-
+    
     return svg.format('viewBox="' + viewBoxValue + '"');
+    */
 }

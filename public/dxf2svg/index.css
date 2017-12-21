@@ -11,6 +11,18 @@ a:link,
 a:visited {
     color: #08d;
 }
+circle {
+  vector-effect: non-scaling-stroke;
+}
+
+
+path {
+  vector-effect: non-scaling-stroke;
+}
+
+line {
+  vector-effect: non-scaling-stroke;
+}
 
 #svg-image {
     width: 800px;
